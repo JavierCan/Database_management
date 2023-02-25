@@ -15,11 +15,14 @@ CREATE TABLE manufacturer (
     PRIMARY KEY (id_manufacturer)
 );
 CREATE TABLE product (
-    id_product INT(100) primary key AUTO_INCREMENT,
+    id_product INT AUTO_INCREMENT,
+    id_manufacturer INT NOT NULL,
     name VARCHAR(50) NOT NULL,
     price INT(50) NOT NULL,
     marca VARCHAR(50) NOT NULL,
-    stock INT(50) NOT NULL)AUTO_INCREMENT=1000;
+    stock INT(50) NOT NULL,
+    PRIMARY KEY (id_product, id_manufacturer));
+
 
 CREATE TABLE purchase(
     id_costumer int ,
